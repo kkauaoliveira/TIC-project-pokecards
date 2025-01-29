@@ -53,7 +53,7 @@ function App() {
           <option value="fire">Fogo</option>
           <option value="water">Agua</option>
           <option value="bug">inseto</option>
-          <option value="poison">Venenoso</option>
+          <option value="poison">Venenoso</option> 
         </select>
       </div>
 
