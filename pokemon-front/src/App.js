@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="p-4 bg-gray-50 min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-6">Pokémon Manager</h1>
+      <h1 className="text-3xl font-bold text-center mb-6">PokeDex</h1>
 
       <div className="flex justify-center gap-4 mb-6">
         <input
@@ -46,49 +46,58 @@ function App() {
           onChange={(e) => setFilterType(e.target.value)}
           className="p-2 border rounded w-1/3"
         >
-          <option value="">All Types</option>
-          <option value="grass">Grass</option>
-          <option value="fire">Fire</option>
-          <option value="water">Water</option>
-          {/* Add other types as needed */}
+          <option value="">Todos os Tipos</option>
+          <option value="grass">Planta</option>
+          <option value="fire">Fogo</option>
+          <option value="water">Agua</option>
         </select>
       </div>
 
       <div className="flex flex-col items-center gap-4 mb-6">
-        <h2 className="text-xl font-semibold">Add Your Pokémon</h2>
+        <h2 className="text-xl font-semibold">Adicione seu pokemon</h2>
         <input
           type="text"
-          placeholder="Name"
+          placeholder="Nome"
           value={newPokemon.name}
           onChange={(e) => setNewPokemon({ ...newPokemon, name: e.target.value })}
           className="p-2 border rounded"
         />
         <input
           type="text"
-          placeholder="Type"
+          placeholder="Tipo"
           value={newPokemon.type}
           onChange={(e) => setNewPokemon({ ...newPokemon, type: e.target.value })}
           className="p-2 border rounded"
         />
         <input
           type="text"
-          placeholder="Image URL"
+          placeholder="Imagem link"
           value={newPokemon.image}
           onChange={(e) => setNewPokemon({ ...newPokemon, image: e.target.value })}
           className="p-2 border rounded"
         />
-        <button onClick={handleAddPokemon} className="p-2 bg-blue-500 text-white rounded mt-2">Add Pokémon</button>
+        <button onClick={handleAddPokemon} className="p-2 bg-blue-500 text-white rounded mt-2">Adicionar Pokémon</button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {filteredPokemon.map((pokemon, index) => (
-          <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-            <img src={pokemon.sprites?.front_default || pokemon.image} alt={pokemon.name} className="w-full h-32 object-cover mb-4 rounded" />
-            <h3 className="text-xl font-semibold text-center">{pokemon.name}</h3>
-            <p className="text-center text-gray-500">Type: {pokemon.types ? pokemon.types.map((t) => t.type.name).join(', ') : pokemon.type}</p>
+        <div className="pokemon-container">
+          <div className="pokemon-grid">
+            {filteredPokemon.map((pokemon, index) => (
+              <div key={index} className="pokemon-card">
+                <img 
+                  src={pokemon.sprites?.front_default || pokemon.image} 
+                  alt={pokemon.name} 
+                  className="pokemon-card__image" 
+                />
+                <h3 className="pokemon-card__title">
+                  {pokemon.name}
+                </h3>
+                <p className="pokemon-card__type">
+                  Type: {pokemon.types ? pokemon.types.map((t) => t.type.name).join(', ') : pokemon.type}
+                </p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
     </div>
   );
 }
