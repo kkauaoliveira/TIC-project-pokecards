@@ -68,5 +68,5 @@ Este projeto consome dados da **PokéAPI**:
 Este projeto está sob a licença MIT. Sinta-se à vontade para usá-lo e modificá-lo! 🐱‍👤
 
 ---
-Desenvolvido por [Seu Nome] 🚀
+Desenvolvido por Kauã Oliveira 🚀
 
