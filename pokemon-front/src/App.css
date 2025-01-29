@@ -65,13 +65,12 @@
 }
 
 .pokemon-card {
+  border: 2px solid #9c9c9c;  /* Borda cinza */
+  border-radius: 10px; /* Bordas arredondadas */
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
   text-align: center;
   background-color: #f8f8f8;
 }
-
 
 .pokemon-card:hover {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);

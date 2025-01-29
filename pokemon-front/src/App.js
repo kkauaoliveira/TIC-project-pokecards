@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './App.css';
+
 
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
@@ -36,7 +38,7 @@ function App() {
       <div className="flex-container">
         <input
           type="text"
-          placeholder="Search Pokémon"
+          placeholder="Pesquisar Pokémon"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="p-2 border rounded w-1/3"
