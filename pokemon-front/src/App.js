@@ -30,10 +30,10 @@ function App() {
     .filter((pokemon) => (filterType ? pokemon.types.some(t => t.type.name === filterType) : true));
 
   return (
-    <div className="p-4 bg-gray-50 min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-6">PokeDex</h1>
+    <div className="page-container">
+      <h1 className="pokedex-title">PokeDex</h1>
 
-      <div className="flex justify-center gap-4 mb-6">
+      <div className="flex-container">
         <input
           type="text"
           placeholder="Search Pokémon"
@@ -53,8 +53,8 @@ function App() {
         </select>
       </div>
 
-      <div className="flex flex-col items-center gap-4 mb-6">
-        <h2 className="text-xl font-semibold">Adicione seu pokemon</h2>
+      <div className="column-flex container">
+        <h2 className="add-pokemon-title">Adicione seu pokemon</h2>
         <input
           type="text"
           placeholder="Nome"
@@ -76,10 +76,9 @@ function App() {
           onChange={(e) => setNewPokemon({ ...newPokemon, image: e.target.value })}
           className="p-2 border rounded"
         />
-        <button onClick={handleAddPokemon} className="p-2 bg-blue-500 text-white rounded mt-2">Adicionar Pokémon</button>
+        <button onClick={handleAddPokemon} className="add-pokemon-button">Adicionar Pokémon</button>
       </div>
 
-        <div className="pokemon-container">
           <div className="pokemon-grid">
             {filteredPokemon.map((pokemon, index) => (
               <div key={index} className="pokemon-card">
@@ -97,7 +96,6 @@ function App() {
               </div>
             ))}
           </div>
-        </div>
     </div>
   );
 }
