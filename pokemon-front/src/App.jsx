@@ -58,6 +58,8 @@ function App() {
           <option value="normal">Normal</option> 
           <option value="rock">Pedra</option> 
           <option value="ice">Gelo</option> 
+          <option value="psychic">Psiquico</option> 
+          <option value="fairy">Fada</option> 
         </select>
       </div>
 

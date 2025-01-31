@@ -16,7 +16,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
 
 ### 1. Clone o repositório
 ```sh
-    git clone https://github.com/seu-usuario/seu-repositorio.git
+    git clone https://github.com/kkauaoliveira/TIC-project-pokecards
 ```
 
 ### 2. Acesse a pasta do projeto
