@@ -6,12 +6,12 @@ const port = 5000;
 app.use(cors());
 app.use(express.json());
 
-// Dados dos Pokémon (em memória, por enquanto)
+// Dados dos Pokémon (em memória)
 let pokemons = [];
 
 // Rota para obter todos os Pokémon
 app.get('/pokemons', (req, res) => {
-  // Organiza os Pokémon por nome
+  // Organiza os Pokémon por nome --> ordem alfabetica
   const sortedPokemons = pokemons.sort((a, b) => a.name.localeCompare(b.name));
   res.json(sortedPokemons);
 });

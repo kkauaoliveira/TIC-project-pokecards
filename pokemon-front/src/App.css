@@ -3,18 +3,113 @@
   font-family: Arial, sans-serif;
 }
 
-.pokemon-card {
-  display: inline-block;
-  margin: 10px;
+.page-container { 
+  padding: 1rem; 
+  background-color: #f9fafb; 
+  min-height: 100vh; 
+}
+
+.pokedex-title { 
+  font-size: 1.875rem; 
+  font-weight: 700; 
+  text-align: center; 
+  margin-bottom: 1.5rem; 
+  color: #000; 
+}
+
+.flex-container { 
+  display: flex;
+  justify-content: center; 
+  gap: 1rem; 
+  margin-bottom: 1.5rem; 
+}
+
+.column-flex-container { 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 1rem; 
+  margin-bottom: 1.5rem; 
+}
+
+.add-pokemon-title { 
+  font-size: 1.25rem; 
+  font-weight: 600; 
+}
+
+.add-pokemon-button { 
+  padding: 0.5rem; 
+  background-color: #3b82f6; 
+  color: white; 
+  border-radius: 0.25rem; 
+  margin-top: 0.5rem; 
+  border: none; 
+  cursor: pointer; 
+  transition: background-color 0.2s ease; 
+}
+
+.add-pokemon-button:hover { 
+  background-color: #2563eb;
+}
+
+.add-pokemon-button:active { 
+  background-color: #1d4ed8;
+}
+
+.pokemon-grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 10px; 
+  justify-content: center; 
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  width: 200px;
+}
+
+.pokemon-card {
+  border: 2px solid #9c9c9c;  /* Borda cinza */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 10px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.pokemon-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-card__image {
+  width: 100%;
+  height: auto;
+  max-height: 8rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+
+.pokemon-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
   text-align: center;
 }
 
-.pokemon-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
+.pokemon-card__type {
+  text-align: center;
+  color: #6b7280;
+}
+
+@media (min-width: 640px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
