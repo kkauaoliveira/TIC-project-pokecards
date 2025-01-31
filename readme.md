@@ -1,5 +1,5 @@
 # PokeDex
-![Este é um site interativo que permite aos usuários pesquisar, adicionar e visualizar Pokémon. Ele utiliza a **PokéAPI** para obter informações sobre os Pokémon e exibi-los de forma organizada.](C:\Users\kauap\OneDrive\Documentos\Estudos\UECE\TIC-project-pokecards\image)
+![Este é um site interativo que permite aos usuários pesquisar, adicionar e visualizar Pokémon. Ele utiliza a **PokéAPI** para obter informações sobre os Pokémon e exibi-los de forma organizada.](https://github.com/kkauaoliveira/TIC-project-pokecards/blob/main/image/poke.png)
 
 
 ## 🚀 Tecnologias Utilizadas
